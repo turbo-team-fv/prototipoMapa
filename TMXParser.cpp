@@ -76,7 +76,7 @@ namespace TMX {
 
         std::cout << "Layer " << layer.id << " correctly loaded. Size: " << layer.width << "x" << layer.height << std::endl;
 
-        ObjectGroup objectGroup;
+        ObjectGroup tmpObjectGroup;
         std::vector<Object> objectRow;
         int flag = 0;
         for (rapidxml::xml_node<>* tile_node = layer_node->first_node("data")->first_node("tile"); tile_node; tile_node = tile_node->next_sibling("tile"))
@@ -87,17 +87,23 @@ namespace TMX {
                 tmpObject.gid = std::atoi(tile_node->first_attribute("gid")->value());
                 objectRow.push_back(tmpObject);
                 flag++;
-                std::cout << "Cargando tile con gid: " << tmpObject.gid << std::endl;
+                //std::cout << "Cargando tile con gid: " << tmpObject.gid << std::endl;
             }
             else
             {
-                objectGroup.objects.push_back(objectRow); /// la almacenamos en el coonjunto de objetos
+                tmpObjectGroup.objects.push_back(objectRow); /// la almacenamos en el coonjunto de objetos
                 objectRow.clear(); /// vaciamos la variable auxiliar
                 flag = 0;
             }
         }
+
+        // una vez tenemos todos los objetos de una capa cargador: los pasamos a la variable
+        objectGroup[layer.name] = tmpObjectGroup;
+        std::cout << "Tiles from layer " << layer.name << " initialized" << std::endl;
+
     }
 
+    std::cout << "Test of access on a position of object matrix: " << objectGroup["Capa1"].objects[4][4].gid << std::endl;
 
     return true;
   }
