@@ -76,19 +76,25 @@ namespace TMX {
 
         std::cout << "Layer " << layer.id << " correctly loaded. Size: " << layer.width << "x" << layer.height << std::endl;
 
+        ObjectGroup objectGroup;
         std::vector<Object> objectRow;
         int flag = 0;
-        for (rapidxml::xml_node<>* tile_node = layer_node->first_node("tile"); tile_node; tile_node = tile_node->next_sibling("tile"))
+        for (rapidxml::xml_node<>* tile_node = layer_node->first_node("data")->first_node("tile"); tile_node; tile_node = tile_node->next_sibling("tile"))
         {
-            if(flag < 10)
+            if(flag < layer.width)
             {
                 Object tmpObject;
                 tmpObject.gid = std::atoi(tile_node->first_attribute("gid")->value());
                 objectRow.push_back(tmpObject);
                 flag++;
+                std::cout << "Cargando tile con gid: " << tmpObject.gid << std::endl;
             }
             else
-                // vaciar el vector
+            {
+                objectGroup.objects.push_back(objectRow); /// la almacenamos en el coonjunto de objetos
+                objectRow.clear(); /// vaciamos la variable auxiliar
+                flag = 0;
+            }
         }
     }
 
