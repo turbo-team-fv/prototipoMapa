@@ -47,10 +47,13 @@ namespace TMX
       };
 
       struct TileLayer {
+        int id;
         std::string name;
         bool visible;
         float opacity;
         Data data;
+        unsigned int width;
+        unsigned int height;
         std::map<std::string, std::string> property;
       };
 
