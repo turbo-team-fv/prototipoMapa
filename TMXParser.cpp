@@ -76,7 +76,20 @@ namespace TMX {
 
         std::cout << "Layer " << layer.id << " correctly loaded. Size: " << layer.width << "x" << layer.height << std::endl;
 
-        // for (rapidxml::xml_node<>* data_node = root_node->first_node("tile"); data_node; data_node = data_node->next_sibling("tile"))
+        std::vector<Object> objectRow;
+        int flag = 0;
+        for (rapidxml::xml_node<>* tile_node = layer_node->first_node("tile"); tile_node; tile_node = tile_node->next_sibling("tile"))
+        {
+            if(flag < 10)
+            {
+                Object tmpObject;
+                tmpObject.gid = std::atoi(tile_node->first_attribute("gid")->value());
+                objectRow.push_back(tmpObject);
+                flag++;
+            }
+            else
+                // vaciar el vector
+        }
     }
 
 
