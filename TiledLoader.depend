@@ -1,0 +1,98 @@
+# depslib dependency file v1.0
+1552824469 source:/home/pablo/Source/FV/TiledLoader/main.cpp
+	"SFML/Graphics.hpp"
+	<iostream>
+	<fstream>
+	<cctype>
+	<string>
+	"TMXParser.h"
+
+1242171978 /home/pablo/Source/FV/TiledLoader/lib/rapidxml-1.13/rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1552821950 /home/pablo/Source/FV/TiledLoader/include/TMXParser.h
+	"rapidxml/rapidxml.hpp"
+	"rapidxml/rapidxml_utils.hpp"
+	<string>
+	<vector>
+	<utility>
+	<map>
+
+1502460289 /home/pablo/Source/FV/TiledLoader/include/rapidxml/rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1502460289 /home/pablo/Source/FV/TiledLoader/include/rapidxml/rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1552824495 /home/pablo/Source/FV/TiledLoader/TMXParser.h
+	"rapidxml/rapidxml.hpp"
+	"rapidxml/rapidxml_utils.hpp"
+	<string>
+	<vector>
+	<utility>
+	<map>
+
+1502460289 /home/pablo/Source/FV/TiledLoader/rapidxml/rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1502460289 /home/pablo/Source/FV/TiledLoader/rapidxml/rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1552824059 source:/home/pablo/Source/FV/TiledLoader/TMXParser.cpp
+	"TMXParser.h"
+	<cstdlib>
+	<iostream>
+	<sstream>
+
+1552824469 source:/home/pablo/Source/FV/prototipoMapa/main.cpp
+	"SFML/Graphics.hpp"
+	<iostream>
+	<fstream>
+	<cctype>
+	<string>
+	"TMXParser.h"
+
+1552824495 /home/pablo/Source/FV/prototipoMapa/TMXParser.h
+	"rapidxml/rapidxml.hpp"
+	"rapidxml/rapidxml_utils.hpp"
+	<string>
+	<vector>
+	<utility>
+	<map>
+
+1502460289 /home/pablo/Source/FV/prototipoMapa/rapidxml/rapidxml.hpp
+	<cstdlib>
+	<cassert>
+	<new>
+	<exception>
+
+1502460289 /home/pablo/Source/FV/prototipoMapa/rapidxml/rapidxml_utils.hpp
+	"rapidxml.hpp"
+	<vector>
+	<string>
+	<fstream>
+	<stdexcept>
+
+1552824059 source:/home/pablo/Source/FV/prototipoMapa/TMXParser.cpp
+	"TMXParser.h"
+	<cstdlib>
+	<iostream>
+	<sstream>
+
