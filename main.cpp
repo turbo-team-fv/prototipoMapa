@@ -1,10 +1,20 @@
-#include "juego.h"
 #include "SFML/Graphics.hpp"
+#include <iostream>
+#include <fstream>
+#include <cctype>
+#include <string>
+
+#include "TMXParser.h"
+
+
+// #include "lib/rapidxml-1.13/rapidxml.hpp"
 
 int main()
 {
-    juego * partida1;
-    partida1 = new juego({800, 600}, "Dibujar imagenes");
+    // objeto TMXparser
+    TMX::Parser tmx;
+    tmx.load("assets/PaPablo.tmx");
+    // cout << "Map Version: " << tmx.mapInfo.version << endl;
 
     return 0;
 }
