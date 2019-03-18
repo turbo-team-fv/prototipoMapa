@@ -61,6 +61,11 @@ namespace TMX {
         Tileset tmpTileset;
         tmpTileset.firstGID = std::atoi(tileset_node->first_attribute("firstgid")->value());
         tmpTileset.source = tileset_node->first_node("image")->first_attribute("source")->value();
+        tmpTileset.columns = std::atoi(tileset_node->first_attribute("columns")->value());
+        tmpTileset.tileHeight = std::atoi(tileset_node->first_attribute("tileheight")->value());
+        tmpTileset.tileWidth = std::atoi(tileset_node->first_attribute("tilewidth")->value());
+        tmpTileset.spacing = std::atoi(tileset_node->first_attribute("spacing")->value());
+        tmpTileset.tileCount = std::atoi(tileset_node->first_attribute("tilecount")->value());
         std::cout << "Texture source(s) path: " << tmpTileset.source << std::endl;
         tilesetList.push_back(tmpTileset);
     }
